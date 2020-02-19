@@ -169,6 +169,13 @@ router.get('/index_category', function (req, res) {
   }, 300)
 })
 
+// handle get / to aviod leancloud error
+router.get('/', function (req, res) {
+  setTimeout(function () {
+    res.send('vue shop index')
+  }, 300)
+})
+
 /*
 根据经纬度获取商铺列表
 ?latitude=40.10038&longitude=116.36867
